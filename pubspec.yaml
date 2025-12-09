@@ -1,0 +1,11 @@
+name: domain
+description: Capa de dominio - Lógica de negocio pura
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  dartz: ^0.10.1
+  intl: ^0.18.0
