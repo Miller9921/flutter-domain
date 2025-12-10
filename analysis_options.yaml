@@ -1,0 +1,24 @@
+include: package:lints/recommended.yaml
+
+linter:
+  rules:
+    # Enforce best practices
+    always_declare_return_types: true
+    prefer_single_quotes: true
+    avoid_print: true
+    prefer_const_constructors: true
+    prefer_const_declarations: true
+    prefer_final_fields: true
+    prefer_final_locals: true
+    unnecessary_this: true
+    # Flutter specific rules to avoid
+    avoid_web_libraries_in_flutter: false
+    use_key_in_widget_constructors: false
+
+analyzer:
+  errors:
+    # Make Flutter imports fail
+    import_of_legacy_library_into_null_safe: error
+  exclude:
+    - '**/*.g.dart'
+    - '**/*.freezed.dart'
