@@ -19,20 +19,12 @@ class SearchQuestionsUseCase {
     DifficultyLevel? difficulty,
     bool includeInactive = false,
   }) async {
-    final result = await repository.searchQuestions(
+    return await repository.searchQuestions(
       searchText: searchText,
       tags: tags,
       type: type,
       difficulty: difficulty,
       isActive: includeInactive ? null : true,
     );
-
-    return result.map((questions) {
-      // Additional filtering if needed
-      if (!includeInactive) {
-        return questions.where((question) => question.isActive).toList();
-      }
-      return questions;
-    });
   }
 }
